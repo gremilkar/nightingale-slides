@@ -154,7 +154,7 @@ header {
 
     .tab::before, .tab::after {
       content: "";
-      height: 70%;
+      height: 100%;
       width: 10%;
       position: absolute;
       top: -.15em;
