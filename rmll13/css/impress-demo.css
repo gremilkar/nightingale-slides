@@ -83,7 +83,7 @@ table {
 */
 body {
     font-family: 'PT Sans', sans-serif;
-    min-height: 740px;
+    /*min-height: 740px;*/
 
     background-color: #414141;
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #414141), color-stop(100%, #333333));
@@ -96,108 +96,125 @@ body {
     z-index: 1;
 }
 
+.notes {
+    display: none;
+}
+
 .wrapper {
     -webkit-box-shadow: #292929 0 0 0.4em 0.1em;
-  -moz-box-shadow: #292929 0 0 0.4em 0.1em;
-  box-shadow: #292929 0 0 0.4em 0.1em;
-  margin-top: 96px;
-  margin-bottom: 2%;
-  position: relative;
-  z-index: -100;
-  background: white;
-  height: 83%;
+    -moz-box-shadow: #292929 0 0 0.4em 0.1em;
+    box-shadow: #292929 0 0 0.4em 0.1em;
+    position: relative;
+    background: white;
+    height: 75%;
+    z-index: -100;
 }
 
 header {
-    width: 900px;
-    margin: 0 auto;
-    position: relative;
+    display: none !important;
 }
 
-#headerlogo {
-  position: absolute;
-  top: -4em;
-  left: -0.5%;
-}
+@media (min-height:400px) {
+    .wrapper {
+        margin-top: 96px;
+        padding: 60px;
+    }
+    #impress {
+        margin-top: 45px;
+        margin-bottom: 40px;
+    }
+    header {
+        display: block !important;
+        width: 900px;
+        margin: 0 auto;
+        position: relative;
+    }
 
-#headerlogo img {
-  max-height: 9em;
-  max-width: 27em;
-  width: 100%;
-  position: relative;
-  z-index: -10;
-}
+    #headerlogo {
+      position: absolute;
+      top: -4em;
+      left: -0.5%;
+    }
 
-.tab {
-  width: 92.59%;
-  height: 77.77%;
-  top: 11.115%;
-  left: 3.705%;
-  margin-right: 3.705%;
-  position: absolute;
-}
+    #headerlogo img {
+      max-height: 9em;
+      max-width: 27em;
+      width: 100%;
+      position: relative;
+      z-index: -10;
+    }
 
-.tab::before, .tab::after {
-  content: "";
-  height: 70%;
-  width: 10%;
-  position: absolute;
-  top: -.15em;
-}
-.tab::before {
-  -webkit-transform-origin: top left;
-  -moz-transform-origin: top left;
-  -ms-transform-origin: top left;
-  -o-transform-origin: top left;
-  transform-origin: top left;
-  -webkit-transform: rotate(20deg);
-  -moz-transform: rotate(20deg);
-  -ms-transform: rotate(20deg);
-  -o-transform: rotate(20deg);
-  transform: rotate(20deg);
-  left: -.2em;
-  -moz-border-radius-topleft: 0.5em;
-  -webkit-border-top-left-radius: 0.5em;
-  border-top-left-radius: 0.5em;
-}
+    .tab {
+      width: 92.59%;
+      height: 77.77%;
+      top: 11.115%;
+      left: 3.705%;
+      margin-right: 3.705%;
+      position: absolute;
+    }
 
-.tab::after {
-  -webkit-transform-origin: top right;
-  -moz-transform-origin: top right;
-  -ms-transform-origin: top right;
-  -o-transform-origin: top right;
-  transform-origin: top right;
-  -webkit-transform: rotate(-20deg);
-  -moz-transform: rotate(-20deg);
-  -ms-transform: rotate(-20deg);
-  -o-transform: rotate(-20deg);
-  transform: rotate(-20deg);
-  right: -.2em;
-  -moz-border-radius-topright: 0.5em;
-  -webkit-border-top-right-radius: 0.5em;
-  border-top-right-radius: 0.5em;
-}
+    .tab::before, .tab::after {
+      content: "";
+      height: 70%;
+      width: 10%;
+      position: absolute;
+      top: -.15em;
+    }
+    .tab::before {
+      -webkit-transform-origin: top left;
+      -moz-transform-origin: top left;
+      -ms-transform-origin: top left;
+      -o-transform-origin: top left;
+      transform-origin: top left;
+      -webkit-transform: rotate(20deg);
+      -moz-transform: rotate(20deg);
+      -ms-transform: rotate(20deg);
+      -o-transform: rotate(20deg);
+      transform: rotate(20deg);
+      left: -.2em;
+      -moz-border-radius-topleft: 0.5em;
+      -webkit-border-top-left-radius: 0.5em;
+      border-top-left-radius: 0.5em;
+    }
 
-#birdtab {
-  background: white;
-  z-index: -11;
-}
+    .tab::after {
+      -webkit-transform-origin: top right;
+      -moz-transform-origin: top right;
+      -ms-transform-origin: top right;
+      -o-transform-origin: top right;
+      transform-origin: top right;
+      -webkit-transform: rotate(-20deg);
+      -moz-transform: rotate(-20deg);
+      -ms-transform: rotate(-20deg);
+      -o-transform: rotate(-20deg);
+      transform: rotate(-20deg);
+      right: -.2em;
+      -moz-border-radius-topright: 0.5em;
+      -webkit-border-top-right-radius: 0.5em;
+      border-top-right-radius: 0.5em;
+    }
 
-#birdtab::before, #birdtab::after {
-  background: white;
-}
+    #birdtab {
+      background: white;
+      z-index: -11;
+    }
 
-#tabshadow {
-  z-index: -101;
-  -webkit-box-shadow: #292929 0 0 0.4em 0.1em;
-  -moz-box-shadow: #292929 0 0 0.4em 0.1em;
-  box-shadow: #292929 0 0 0.4em 0.1em;
-}
+    #birdtab::before, #birdtab::after {
+      background: white;
+    }
 
-#tabshadow::before, #tabshadow::after {
-  -webkit-box-shadow: #292929 0 0 0.4em 0.1em;
-  -moz-box-shadow: #292929 0 0 0.4em 0.1em;
-  box-shadow: #292929 0 0 0.4em 0.1em;
+    #tabshadow {
+      z-index: -1010;
+      -webkit-box-shadow: #292929 0 0 0.4em 0.1em;
+      -moz-box-shadow: #292929 0 0 0.4em 0.1em;
+      box-shadow: #292929 0 0 0.4em 0.1em;
+    }
+
+    #tabshadow::before, #tabshadow::after {
+      -webkit-box-shadow: #292929 0 0 0.4em 0.1em;
+      -moz-box-shadow: #292929 0 0 0.4em 0.1em;
+      box-shadow: #292929 0 0 0.4em 0.1em;
+    }
 }
 
 /*
@@ -271,9 +288,9 @@ a:focus {
 
 .step {
     position: relative;
-    width: 900px;
+    text-aling: center;
     padding: 40px;
-    margin: 20px auto;
+    width: 900px;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
@@ -287,7 +304,8 @@ a:focus {
 
 /* could do this better, but meh. */
 .step>img:not(.avatar) {
-    width: 900px;
+    max-width: 900px;
+    max-height: 70%;
 }
 
 .title {
@@ -310,7 +328,6 @@ a:focus {
     Basically we remove the margin and make inactive steps a little bit transparent.
 */
 .impress-enabled .step {
-    margin: 0;
     opacity: 0.3;
 
     -webkit-transition: opacity 1s;

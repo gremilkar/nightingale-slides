@@ -103,7 +103,6 @@
     </figure>
 </header>
 <div class="wrapper">
-</div>
 
 <!--
     For example this fallback message is only visible when there is `impress-not-supported` class on body.
@@ -172,7 +171,7 @@
     </div>
 
     
-    <div class="step title" data-x="0" data-y="1000">
+    <div class="step title" data-x="0" data-y="1000" id="What_is_Nightingale">
         What is Nightingale?
     </div>
     
@@ -210,11 +209,11 @@
         <ul>
             <li>GStreamer</li>
         </ul>
+        <div class="notes">
+            -sqlite<br>
+            - taglib
+        </div>
     </div>
-    <!--
-        sqlite
-        (taglib)
-    -->
     
     <div class="step" data-x="4000" data-y="1000">
         <img src="img/screenshot.png">
@@ -225,17 +224,23 @@
     </div>
     <div class="step list" data-x="5000" data-y="1000">
         <ul><li>Outdated libraries</li></ul>
+        <div class="notes">
+            -gstreamer<br>
+            -gecko<br>
+            -sqlite<br>
+            -taglib recently upgraded
+        </div>
     </div>
     <div class="step list" data-x="5000" data-y="1070">
         <ul><li>Small team</li></ul>
     </div>
     
-    <div class="step title" data-x="0" data-y="2000">
+    <div class="step title" data-x="0" data-y="2000" id="Development_Process">
         Development Process
     </div>
     
     <div class="step" data-x="1000" data-y="2000">
-        Anarchy.
+        No organisation of work.
     </div>
     
     <div class="step" data-x="2000" data-y="2000">
@@ -263,6 +268,9 @@
     
     <div class="step list" data-x="4000" data-y="2000">
         <ul><li>GitHub Issues</li></ul>
+        <div class="notes">
+            -github repos/branches
+        </div>
     </div>
     <div class="step list" data-x="4000" data-y="2070">
         <ul><li>Forum</li></ul>
@@ -279,13 +287,7 @@
         Websites dependent on a few people
     </div>
     
-    <!--
-        ToDo:
-            - Future (needed features like podcast, CD Rip/Playback; wished features: visualizer, streaming integration
-            - Future: Mediacore merge with gecko?
-    -->
-    
-    <div class="step title" data-x="0" data-y="3000">
+    <div class="step title" data-x="0" data-y="3000" id="Statistics">
         Statistics
     </div>
     
@@ -307,7 +309,7 @@
         <img src="img/pie.png">
     </div>
     
-    <div class="step title" data-x="0" data-y="4000">
+    <div class="step title" data-x="0" data-y="4000" id="QA">
         Q&amp;A
     </div>
     
@@ -331,7 +333,7 @@
 
 </div>
 
-
+</div>
 <!--
     
     Last, but not least.
@@ -348,7 +350,12 @@
     
 -->
 <script src="js/impress.js"></script>
-<script>impress().init();</script>
+<script src="js/impressConsole.js"></script>
+<script>impress().init();
+        console().init();
+        console().open();
+</script>
+
 
 <!--
     
