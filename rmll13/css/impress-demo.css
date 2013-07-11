@@ -119,9 +119,8 @@ header {
         margin-top: 96px;
         padding: 60px;
     }
-    #impress {
+    .step>img:not(.avatar) {
         margin-top: 45px;
-        margin-bottom: 40px;
     }
     header {
         display: block !important;
@@ -146,7 +145,7 @@ header {
 
     .tab {
       width: 92.59%;
-      height: 77.77%;
+      height: 50%;
       top: 11.115%;
       left: 3.705%;
       margin-right: 3.705%;
