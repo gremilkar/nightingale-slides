@@ -1,0 +1,15 @@
+.DS_Store
+thumbs.db
+.directory
+
+# VCS
+.bzr
+.svn
+
+# IDE & text editor files
+*.anjuta*
+.cproject
+.project
+.settings
+*.sublime-*
+
